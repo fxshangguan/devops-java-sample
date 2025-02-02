@@ -2,17 +2,6 @@ pipeline {
   agent {
     node {
       label 'maven'
-      yaml """
-apiVersion: v1
-kind: Pod
-spec:
-  containers:
-  - name: maven
-    image: maven:3.6.3-jdk-8
-    command:
-    - cat
-    tty: true
-"""
     }
   }
 
